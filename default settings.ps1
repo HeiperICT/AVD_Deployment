@@ -1,5 +1,13 @@
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Force
 
+function AddDeploymentTree {
+    New-Item -Path "C:\" -Name "Deployment" -ItemType "directory"
+    New-Item -Path "C:\Deployment" -Name "Experience indicator" -ItemType "directory"
+    New-Item -Path "C:\Deployment" -Name "Paping" -ItemType "directory"
+    New-Item -Path "C:\Deployment" -Name "Default settings" -ItemType "directory"
+
+}
+
 function OutlookSignIn {
     Add-AppxPackage -Register "C:\Windows\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode
 
@@ -57,6 +65,7 @@ function defaultapps {
     winget install -e -h --id Notepad++.Notepad++
 }
 
+AddDeploymentTree
 OutlookSignIn
 frxtrayshortcut
 ExperienceIndicator
