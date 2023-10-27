@@ -8,7 +8,6 @@ if (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Unrestricted -File "C:\deployment\Winx\clean_winx.ps1"' -Verb RunAs
 }else{
     Write-Host "Code is running as administrator — go on executing the script..." -ForegroundColor Green
-    pause
 
     $TempPath=$PSScriptRoot+"\temp"
 
