@@ -1,4 +1,4 @@
-Set-ExecutionPolicy -ExecutionPolicy Bypass
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Force
 
 function OutlookSignIn {
     Add-AppxPackage -Register "C:\Windows\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode
