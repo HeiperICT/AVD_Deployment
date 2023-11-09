@@ -1,13 +1,5 @@
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Force
 
-function AddDeploymentTree {
-    New-Item -Path "C:\" -Name "Deployment" -ItemType "directory"
-    New-Item -Path "C:\Deployment" -Name "Experience indicator" -ItemType "directory"
-    New-Item -Path "C:\Deployment" -Name "Paping" -ItemType "directory"
-    New-Item -Path "C:\Deployment" -Name "Default settings" -ItemType "directory"
-
-}
-
 function frxtrayshortcut {
     $TargetFile = "C:\Program Files\FSLogix\Apps\frxtray.exe"
     $ShortcutFile = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\frxtray.lnk"
@@ -52,7 +44,6 @@ function signoutbutton {
     Copy-Item "C:\Deployment\Default settings\Afmelden.lnk" "C:\Users\Public\Desktop\Afmelden.lnk"
 }
 
-AddDeploymentTree
 frxtrayshortcut
 ExperienceIndicator
 paping
